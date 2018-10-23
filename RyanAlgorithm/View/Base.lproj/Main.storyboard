@@ -10,29 +10,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Algorithm View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RyanAlgorithm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AlgorithmViewController" customModule="RyanAlgorithm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-lc-9Gf">
-                                <rect key="frame" x="65" y="368" width="266" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-eE-tfi" userLabel="Swift Image">
+                                <rect key="frame" x="0.0" y="409" width="375" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="i3j-iO-hMV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algorithm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-lc-9Gf" userLabel="Algorithm Text">
+                                <rect key="frame" x="0.0" y="71" width="375" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="pkg-6o-Lvy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-eE-tfi">
-                                <rect key="frame" x="65" y="92" width="266" height="182"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="leading" secondItem="Izf-eE-tfi" secondAttribute="leading" id="A8K-d3-LVP"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BHS-aH-j9K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Izf-eE-tfi" secondAttribute="bottom" constant="76" id="ci6-qg-pvf"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="width" secondItem="Izf-eE-tfi" secondAttribute="width" id="edx-He-ILI"/>
+                            <constraint firstAttribute="trailing" secondItem="0wJ-lc-9Gf" secondAttribute="trailing" id="nSI-zs-l0X"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="trailing" secondItem="Izf-eE-tfi" secondAttribute="trailing" id="q9I-gz-OG8"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="u7j-hu-DxY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="algorithmText" destination="0wJ-lc-9Gf" id="Ika-Ku-gqR"/>
+                        <outlet property="swiftImage" destination="Izf-eE-tfi" id="cR6-1B-bkm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
