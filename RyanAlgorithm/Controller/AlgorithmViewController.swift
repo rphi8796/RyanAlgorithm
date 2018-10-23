@@ -20,6 +20,8 @@ public class AlgorithmViewController: UIViewController
         super.viewDidLoad()
     }
     
+    // I think that this displays the steps as bullet points with very specific format within the GUI
+    
     public func formatAlgorithm() -> Void
     {
         let title : String = "How to create app in IOS"
@@ -29,9 +31,28 @@ public class AlgorithmViewController: UIViewController
         let stepThree : String = "Create the new group folders."
         let stepFour : String = "Move the existing files into the new groups."
         let stepFive : String = "Fix the identity of the project."
+        
+        let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive]
+        
+        let attributesDictionary = [NSAttributedStringKey.font : algorithmText.font]
+        let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
+        
+        for step in algorithm
+        {
+            let bullet : String = "🇮🇱"
+            let formattedStep : String = "\n\(bullet) \(step)"
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
+            let outlineStyle = createOutlineStyle()
+            
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range: NSMakeRange(0, attributedStringStep.length))
+            
+            fullAttributedString.append(attributedStringStep)
+        }
+        
+        algorithmText.attributedText = fullAttributedString
     }
     
-    private func createOutLineStyle() -> NSParagraphStyle
+    private func createOutlineStyle() -> NSParagraphStyle
     {
         let outLineStyle : NSMutableParagraphStyle = NSMutableParagraphStyle()
         
@@ -40,7 +61,11 @@ public class AlgorithmViewController: UIViewController
         outLineStyle.firstLineHeadIndent = 20
         outLineStyle.headIndent = 35
         
+        
+       
+        
         return outLineStyle
+    
     }
 }
 
