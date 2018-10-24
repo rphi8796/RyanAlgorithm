@@ -18,11 +18,13 @@ public class AlgorithmViewController: UIViewController
     public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
+        
+        formatAlgorithm()
     }
     
     // I think that this displays the steps as bullet points with very specific format within the GUI
     
-    public func formatAlgorithm() -> Void
+    private func formatAlgorithm() -> Void
     {
         let title : String = "How to create app in IOS"
         
@@ -44,7 +46,7 @@ public class AlgorithmViewController: UIViewController
             let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string: formattedStep)
             let outlineStyle = createOutlineStyle()
             
-            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range: NSMakeRange(0, attributedStringStep.length))
+            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range: NSMakeRange(0,attributedStringStep.length))
             
             fullAttributedString.append(attributedStringStep)
         }
@@ -60,9 +62,6 @@ public class AlgorithmViewController: UIViewController
         outLineStyle.defaultTabInterval = 15
         outLineStyle.firstLineHeadIndent = 20
         outLineStyle.headIndent = 35
-        
-        
-       
         
         return outLineStyle
     

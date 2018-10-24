@@ -21,18 +21,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-eE-tfi" userLabel="Swift Image">
                                 <rect key="frame" x="0.0" y="409" width="375" height="182"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="182" id="i3j-iO-hMV"/>
+                                    <constraint firstAttribute="height" constant="182" id="3wc-d6-AT2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-lc-9Gf" userLabel="Algorithm Text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wJ-lc-9Gf" userLabel="Algorithm Text">
                                 <rect key="frame" x="0.0" y="71" width="375" height="221"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="221" id="pkg-6o-Lvy"/>
+                                    <constraint firstAttribute="height" constant="221" id="AJs-2O-Ofg"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Algorithm">
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -41,13 +42,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="leading" secondItem="Izf-eE-tfi" secondAttribute="leading" id="A8K-d3-LVP"/>
-                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BHS-aH-j9K"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Izf-eE-tfi" secondAttribute="bottom" constant="76" id="ci6-qg-pvf"/>
-                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="width" secondItem="Izf-eE-tfi" secondAttribute="width" id="edx-He-ILI"/>
-                            <constraint firstAttribute="trailing" secondItem="0wJ-lc-9Gf" secondAttribute="trailing" id="nSI-zs-l0X"/>
-                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="trailing" secondItem="Izf-eE-tfi" secondAttribute="trailing" id="q9I-gz-OG8"/>
-                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="u7j-hu-DxY"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="I4n-4M-4iG"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="leading" secondItem="Izf-eE-tfi" secondAttribute="leading" id="Pxn-0l-9P6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Izf-eE-tfi" secondAttribute="bottom" constant="76" id="Ruq-D6-Yxo"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kde-j8-ZoZ"/>
+                            <constraint firstItem="0wJ-lc-9Gf" firstAttribute="trailing" secondItem="Izf-eE-tfi" secondAttribute="trailing" id="ttH-ve-4Yc"/>
+                            <constraint firstAttribute="trailing" secondItem="0wJ-lc-9Gf" secondAttribute="trailing" id="wZu-z1-5f7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
